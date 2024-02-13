@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "../App.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,7 +15,7 @@ const Login = () => {
           className='flex justify-center items-center max-w-xs mx-auto mt-12'
           src='https://crms.mymudra.com/images/logo.png'
         ></img>
-        <div className='w-10/12 p-6 m-auto mt-8 bg-white rounded-md shadow-xl shadow-teal-600/40 ring ring-2 ring-gray-200 sm:max-w-sm lg:max-w-lg'>
+        <div className='w-10/12 p-6 m-auto mt-8 bg-white rounded-md shadow-xl shadow-teal-600/40 ring-2 ring-gray-200 sm:max-w-sm lg:max-w-lg'>
           <h1 className='text-2xl font-semibold text-center text-black-700 uppercase'>
             Login
           </h1>
