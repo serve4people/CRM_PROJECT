@@ -1,14 +1,21 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import Menu from "./Menu";
 const NavBar = () => {
+  const [check, setCheck] = useState(false);
+
+  const isStatus = () => {
+    setCheck(!check);
+  };
   return (
     <>
-      <div className='navbar bg-base-100'>
-        <div className='flex-1'>
-          <a className='btn btn-ghost text-xl'>daisyUI</a>
+      <div className='navbar flex flex-wrap bg-base-100 sticky z-10 border-2'>
+        <div className='flex-1 md:basis-3/5 lg:basis-3/5'>
+          <span className='btn btn-ghost text-xl mx-auto' onClick={isStatus}>
+            My Mudra Fincorp
+          </span>
         </div>
 
-        <div className='flex-none gap-2'>
+        <div className='flex md:basis-1/5 lg:basis-1/4 gap-2'>
           <div className='form-control'>
             <input
               type='text'
@@ -45,6 +52,7 @@ const NavBar = () => {
             </ul>
           </div>
         </div>
+        {/* <div className=''>{!check && <Menu />}</div> */}
       </div>
     </>
   );

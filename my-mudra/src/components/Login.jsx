@@ -9,13 +9,14 @@ const Login = () => {
     console.log(`Login by ${email}`);
   };
   return (
-    <>
-      <div className='relative flex flex-col justify-center min-h-screen overflow-hidden'>
+    <div className='login-body'>
+      <div className='relative flex flex-col justify-center min-h-screen overflow-hidden '>
         <img
           className='flex justify-center items-center max-w-xs mx-auto mt-12'
           src='https://crms.mymudra.com/images/logo.png'
         ></img>
-        <div className='w-10/12 p-6 m-auto mt-8 bg-white rounded-md shadow-xl shadow-teal-600/40 ring-2 ring-gray-200 sm:max-w-sm lg:max-w-lg'>
+        {/* w-8/12 */}
+        <div className='w-8/12 p-6 m-auto mt-8 bg-white rounded-md shadow-xl shadow-teal-600/40 ring-2 ring-gray-200 xsm:max-w-xsm sm:max-w-sm lg:max-w-lg'>
           <h1 className='text-2xl font-semibold text-center text-black-700 uppercase'>
             Login
           </h1>
@@ -49,7 +50,7 @@ const Login = () => {
               />
             </div>
             <div>
-              <div className='flex items-stretch'>
+              <div className='flex items-stretch max-sm:flex-col'>
                 <div className=''>
                   <input type='checkbox' className='ml-1'></input>
                   <label className='ml-1'>Remember me</label>
@@ -57,7 +58,8 @@ const Login = () => {
                 <div className=''>
                   <a
                     href='#'
-                    className='lg:ml-52 text-xs max-w-sm text-teal-600 hover:underline'
+                    //
+                    className='lg:ml-60 md:ml-24 text-xs text-teal-600 hover:underline'
                   >
                     <label className='max-w-sm'>Forget Password?</label>
                   </a>
@@ -72,13 +74,13 @@ const Login = () => {
                 Login
               </button>
             </div>
-            <span className='lg:ml-28 md:ml-16 text-xs'>
+            <span className='lg:ml-28 md:ml-12 text-xs'>
               &copy; 2024 mudrafincorp.co.in | All Rights Reserved
             </span>
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
